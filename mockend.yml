@@ -11,7 +11,7 @@ models:
       title: { loremWords: [10, 15] }
       cover: { imageURL: [1920, 1080] }
     data: [
-      { title: some non-random title },
+      { cover: https://picsum.photos/960/540 },
       { title: some non-random title },
     ]
   Comment:
