@@ -9,7 +9,7 @@ models:
     fake:
       _count: 10
       title: { loremWords: [10, 15] }
-      cover: {imagerURL: [ 640, 480 ]}
+      cover: { imageURL: [1920, 1080] }
     data: [
       { title: some non-random title },
       { title: some non-random title },
