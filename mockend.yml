@@ -1,23 +1,25 @@
 models:
-  User:
-    hasMany: [ Post ]
-    fake:
-      _count: 10
-      name: firstName
+
   Post:
-    belongsTo: [ User ]
+    belongsTo: [User]
+    count: 10
     fake:
-      _count: 10
       title: { loremWords: [10, 15] }
       cover: { imageURL: [1920, 1080] }
     data: [
       { cover: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg },
       { title: some non-random title },
     ]
-  Comment:
-    belongsTo: [ Post ]
+
+  User:
+    hasMany: [Post]
+    count: 10
     fake:
-      _count: 10
-      body: { loremParagraphs: [ 10, 100 ] }
-      createdAt: { dateTime: [ 2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z ] }
+      name: firstName
+#  Comment:
+#    belongsTo: [ Post ]
+#    fake:
+#      _count: 10
+#      body: { loremParagraphs: [ 10, 100 ] }
+#      createdAt: { dateTime: [ 2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z ] }
 
