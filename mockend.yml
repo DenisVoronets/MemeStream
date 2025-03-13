@@ -11,7 +11,7 @@ models:
       title: { loremWords: [10, 15] }
       cover: { imageURL: [1920, 1080] }
     data: [
-      { cover: https://picsum.photos/960/540 },
+      { cover: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg },
       { title: some non-random title },
     ]
   Comment:
