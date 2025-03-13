@@ -9,11 +9,9 @@ models:
     fake:
       _count: 10
       title: { loremWords: [10, 15] }
-
-  Post:
     data: [
-      { title: Title 1 },
-      { title: Title 2 },
+      { title: some non-random title },
+      { title: some non-random title },
     ]
 
   Comment:
