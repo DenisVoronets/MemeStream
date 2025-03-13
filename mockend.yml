@@ -1,6 +1,6 @@
 models:
   User:
-    hasMany: [ Post ]
+    hasMany: [Post]
     fake:
       _count: 10
       name: firstName
@@ -12,7 +12,7 @@ models:
       title: { loremWords: [10, 15] }
       cover: { imageURL: [1920, 1080] }
     data: [
-      { cover: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg },
+      { cover: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg, userId: 1 },
       { title: some non-random title },
     ]
 #  Comment:
