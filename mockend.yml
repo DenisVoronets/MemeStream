@@ -13,7 +13,7 @@ models:
       Post:
         data: [
           { image: https://i0.wp.com/static.stacker.com/s3fs-public/styles/1280x720/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.53.38%20AM.png?ssl=1 },
-          { image: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg },
+          { image: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg }
         ]
   Comment:
     belongsTo: [ Post ]
