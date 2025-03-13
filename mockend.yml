@@ -10,7 +10,6 @@ models:
       _count: 10
       title: { loremWords: [10, 15] }
       cover: {imagerURL: [ 640, 480 ]}
-    numerify: 'https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg'
     data: [
       { title: some non-random title },
       { title: some non-random title },
