@@ -1,19 +1,24 @@
 models:
-  Post:
-    hasMany: [ Comment ]
-    belongsTo: [ User ]
-    fake:
-      _count: 10
-      image: https://i0.wp.com/static.stacker.com/s3fs-public/styles/1280x720/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.53.38%20AM.png?ssl=1
-      title: { loremWords: [ 5, 20 ] }
-  Comment:
-    belongsTo: [ Post ]
-    fake:
-      _count: 10
-      body: { loremParagraphs: [ 10, 100 ] }
-      createdAt: { dateTime: [ 2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z ] }
   User:
     hasMany: [ Post ]
     fake:
-      _count: 10
+      count: 10
       name: firstName
+  Post:
+    belongsTo: [ User ]
+    fake:
+      count: 10
+      image:
+      title: { loremWords: [ 5, 20 ] }
+      Post:
+        data: [
+          { image: https://i0.wp.com/static.stacker.com/s3fs-public/styles/1280x720/s3/2019-03/Screen%20Shot%202019-03-14%20at%2010.53.38%20AM.png?ssl=1 },
+          { image: https://www.watchmojo.com/uploads/blipthumbs/Fi-T-Top10-TV-Scenes-That-Became-Memes-720p30_480.jpg },
+        ]
+  Comment:
+    belongsTo: [ Post ]
+    fake:
+      count: 10
+      body: { loremParagraphs: [ 10, 100 ] }
+      createdAt: { dateTime: [ 2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z ] }
+
