@@ -1,9 +1,12 @@
-package com.fortin.memestream.ui.theme
+package com.testapp.memestream.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBarItemColors
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.TextFieldColors
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -54,5 +57,14 @@ fun MemeStreamTheme(
         colorScheme = colorScheme,
         typography = Typography,
         content = content
+    )
+}
+@Composable
+fun navBarColors(): NavigationBarItemColors {
+    return NavigationBarItemDefaults.colors(
+        selectedIconColor = Black,
+        unselectedIconColor = White,
+        selectedTextColor = White,
+        indicatorColor = White
     )
 }

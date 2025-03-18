@@ -1,4 +1,4 @@
-package com.fortin.memestream
+package com.testapp.memestream
 
 import org.junit.Test
 
