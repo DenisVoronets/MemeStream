@@ -10,6 +10,8 @@ import com.testapp.memestream.network.apiRequests.PostApiRequests
 import com.testapp.memestream.network.apiRequests.UserApiRequests
 import com.testapp.memestream.network.apiResponses.ApiResult
 import com.testapp.memestream.utils.Constances.logger
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -30,7 +32,9 @@ class HomeScreenViewModel(
     private fun fetchUsersWithPosts() {
         viewModelScope.launch {
             val users = fetchUsers()
-            val userPosts = users.flatMap { user -> fetchPostsForUser(user) }
+            val userPosts = users.map { user ->
+                async { fetchPostsForUser(user) }
+            }.awaitAll().flatten()
             _usersWithPosts.value = userPosts
             val memes = fetchMemes(userPosts.size)
             _memesUrls.value = memes
